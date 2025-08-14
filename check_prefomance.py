@@ -126,15 +126,15 @@ if __name__ == '__main__':
     
     # GPU 사용량 그래프(cuda:0)
     idle_gpu_usage = idle_usage['gpu'][0]
-    gpu_usage = {'test_1': test_1_usage['gpu'][0], 
-                 'test_2': test_2_usage['gpu'][0], 
-                 'test_3': test_3_usage['gpu'][0]}
+    gpu_usage = {'test_1': [x[0] for x in test_1_usage['gpu']], 
+                 'test_2': [x[0] for x in test_2_usage['gpu']], 
+                 'test_3': [x[0] for x in test_3_usage['gpu']]}
 
     # GPU Memory 사용량 그래프(cuda:0)
     idle_gpu_mem_usage = idle_usage['gpu_memory'][0]
-    gpu_mem_usage = {'test_1': test_1_usage['gpu_memory'][0], 
-                     'test_2': test_2_usage['gpu_memory'][0], 
-                     'test_3': test_3_usage['gpu_memory'][0]}
+    gpu_mem_usage = {'test_1': [x[0] for x in test_1_usage['gpu_memory']], 
+                     'test_2': [x[0] for x in test_2_usage['gpu_memory']], 
+                     'test_3': [x[0] for x in test_3_usage['gpu_memory']]}
 
     # 2x2 subplot 생성
     fig, axes = plt.subplots(2, 2, figsize=(15, 10))
