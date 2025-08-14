@@ -139,8 +139,8 @@ if __name__ == '__main__':
     # 2x2 subplot 생성
     fig, axes = plt.subplots(2, 2, figsize=(15, 10))
 
-    # 시간 축 (30초)
-    time_axis = list(range(30))
+    # 시간 축
+    time_axis = list(range(SETUP_DURATION))
 
     # CPU 사용량 그래프
     axes[0, 0].plot(time_axis, cpu_usage['test_1'], label='1 person', marker='o', linewidth=2)
