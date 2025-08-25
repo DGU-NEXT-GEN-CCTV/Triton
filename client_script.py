@@ -69,7 +69,7 @@ def inference(triton_server_url: str, model_name: str, model_version:int, num_pe
                 print(f"결과 형태: {output_data.shape}")
 
                 for result in output_data:
-                    print(f"예측 결과: {result}")
+                    print(f"예측 결과: {result[0]:.2f}, {result[1]:.2f}")
 
                 print("-" * 40)
             
